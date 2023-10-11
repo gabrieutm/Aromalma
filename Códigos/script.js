@@ -68,18 +68,3 @@ function closeAllMenus() {
         menu.style.display = 'none';
     });
 }
-
-
-//tela de login e cadastro
-function toggleScreen(screen) {
-    const loginContainer = document.getElementById("login-container");
-    const registerContainer = document.getElementById("register-container");
-
-    if (screen === 'login') {
-        loginContainer.style.display = 'block';
-        registerContainer.style.display = 'none';
-    } else if (screen === 'register') {
-        loginContainer.style.display = 'none';
-        registerContainer.style.display = 'block';
-    }
-}

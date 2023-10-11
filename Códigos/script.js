@@ -56,7 +56,7 @@ function toggleMenu(menuId) {
     } else {
         menu.style.display = 'block';
     }
-}
+};
 
 
 
@@ -67,4 +67,4 @@ function closeAllMenus() {
     menus.forEach(function (menu) {
         menu.style.display = 'none';
     });
-}
+};

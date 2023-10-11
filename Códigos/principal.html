@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aromalma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <div id="overlay"></div>
+
+    <div id="container">
+        <img class="selected" src="../ImagensNew/1.png" alt="pic1">
+        <img src="../ImagensNew/2.png" alt="pic2">
+        <img src="../ImagensNew/3.png" alt="pic3">
+        <img src="../ImagensNew/4.png" alt="pic4">
+        <img src="../ImagensNew/5.png" alt="pic5">
+        <img src="../ImagensNew/6.png" alt="pic6">
+        
+        <span id="title">
+            <h1>Aromalma</h1>
+            <p>Nutrindo a essência com natureza pura</p>
+        </span>
+        
+        <div id="status-site">
+            <p>Site em desenvolvimento</p>
+        </div>
+    </div>
+
+    <button id="open-menu"><i class="bi bi-list"></i></button>
+
+    <div id="sidebar">
+        <button id="close-menu"><i class="bi bi-x-circle"></i></button>
+        <header>
+            <h1>MENU</h1>
+        </header>
+        <nav id="menu-items">
+            <ul>
+                <li><button id="homebtn" class="menu-btn"><a href="#"><i class="bi bi-house"></i>INÍCIO</a></button></li>
+                <li><button onclick="toggleMenu('loginbtn-popup')" class="menu-btn"><i class="bi bi-person-circle"></i>CONTA</button></li>
+                <li><button onclick="toggleMenu('products-popup')" class="menu-btn"><i class="bi bi-box2-heart"></i>PRODUTOS</button></li>
+                <li><button onclick="toggleMenu('about-popup')" class="menu-btn"><i class="bi bi-info-circle"></i>SOBRE</button></li>
+                <li><button onclick="toggleMenu('join-popup')" class="menu-btn"><i class="bi bi-people"></i>FAÇA PARTE</button></li>
+                <li><button onclick="toggleMenu('support-popup')" class="menu-btn"><i class="bi bi-chat-right-dots"></i>SUPORTE</button></li>
+                <li><button onclick="toggleMenu('app-popup')" class="menu-btn"><i class="bi bi-phone"></i>APP</button></li>
+            </ul>
+        </nav>
+        <footer>
+            <nav id="network">
+                <ul>
+                    <li><button class="social-medias"><i class="bi bi-instagram"></i></button></li>
+                    <li><button class="social-medias"><i class="bi bi-facebook"></i></button></li>
+                    <li><button class="social-medias"><i class="bi bi-linkedin"></i></button></li>
+                    <li><button class="social-medias"><i class="bi bi-twitter"></i></button></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <div id="loginbtn-popup" class="menu-popup">
+        <button class="icon-close" onclick="closeAllMenus()"><i class="bi bi-x-circle"></i></button>
+        <div class="form-box-login">
+            <h1>Entrar</h1>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+    
+                <label for="remember">Lembrar de mim:</label>
+                <input type="checkbox" id="remember" name="remember">
+    
+                <a class="forgot-password" href="#">Esqueci a senha</a>
+    
+                <button class="login-button" type="submit">Entrar</button>
+            </form>
+    </div>
+
+    <div id="products-popup" class="menu-popup">
+        <button class="icon-close" onclick="closeAllMenus()"><i class="bi bi-x-circle"></i></button>
+        <h1>Descubra o poder da natureza em sua forma mais pura com a abrangente linha de produtos da Aromalma</h1>
+        <div id="text">
+            <p>Dos deliciosos alimentos orgânicos, cultivados com devoção nas fazendas familiares, aos cosméticos naturais que mimam sua pele com ingredientes que a Terra oferece generosamente, e aos produtos de limpeza ecológicos que respeitam tanto o seu lar quanto o meio ambiente.</p>
+            <p>Cada escolha da Aromalma é um passo em direção a um estilo de vida mais saudável e sustentável, uma jornada onde você nutre seu corpo, enriquece sua rotina de cuidados pessoais e mantém seu espaço impecável, enquanto apoia práticas responsáveis que ecoam através do tempo.</p>
+        </div>
+    </div>
+
+    <div id="about-popup" class="menu-popup">
+        <button class="icon-close" onclick="closeAllMenus()"><i class="bi bi-x-circle"></i></button>
+        <h1>Origem</h1>
+        <div id="text">
+            <p>Gabriel, nascido em Almavale em 1999, absorveu desde cedo os valores agrícolas e familiares, inspirado pelas palavras de seus avós sobre o <strong>cuidado com a terra</strong>.
+            <p>Ao crescer, ele testemunhou as lutas das pequenas fazendas e, em 2018, teve a ideia de fundar a <strong>Aromalma</strong>, conectando fazendas familiares a consumidores preocupados com sustentabilidade.</p>
+            <p>Combinando sua paixão pela agricultura orgânica e tecnologia, Gabriel criou uma <strong>plataforma de comércio eletrônico sustentável</strong>.</p>
+            <p>A Aromalma cresceu, expandindo sua gama para incluir <strong>além de alimentos, também cosméticos naturais e produtos de limpeza ecológicos</strong>, enquanto retribuía às comunidades e investia em projetos ambientais e educacionais.</p>
+            <p>Hoje, a Aromalma não é apenas uma marca de produtos sustentáveis, mas uma <strong>comunidade comprometida com a natureza e o apoio mútuo</strong>.</p></p>
+        </div>
+    </div>
+
+    <div id="join-popup" class="menu-popup">
+        <button class="icon-close" onclick="closeAllMenus()"><i class="bi bi-x-circle"></i></button>
+        <div id="text">
+            <p class="impact">Em busca de um propósito que harmonize paixão e impacto positivo?</p>
+            <p>Junte-se a nós no projeto Aromalma, onde temos o compromisso de promover alimentos orgânicos, cosméticos naturais e produtos de limpeza ecológicos provenientes de agricultura familiar.</p>
+            <br>
+            <p>Se você é uma <strong>pessoa, família, pequena empresa ou startup</strong> que compartilha nossa visão de um futuro mais sustentável e quer fazer parte dessa jornada, <strong>venha fazer a diferença conosco na equipe Aromalma!</strong></p>
+        </div>
+    </div>
+
+    <div id="support-popup" class="menu-popup">
+        <button class="icon-close" onclick="closeAllMenus()"><i class="bi bi-x-circle"></i></button>
+        <h1>Oi, que bom te ver aqui!</h1>
+        <div id="text">
+            <p>Precisa de ajuda ou tem alguma dúvida sobre nossos alimentos orgânicos, cosméticos naturais e/ou produtos de limpeza ecológicos?</p>
+            <p>Então está na seção certa para suporte dedicado e informações detalhadas. Estamos aqui para tornar sua experiência Aromalma ainda mais gratificante e esclarecedora.</p>
+        </div>
+    </div>
+
+    <div id="app-popup" class="menu-popup">
+        <button class="icon-close" onclick="closeAllMenus()"><i class="bi bi-x-circle"></i></button>
+        <h1>Faça o download do nosso APP!</h1>
+        <div id="text">
+            <p>Experimente a praticidade na palma da sua mão com o aplicativo Aromalma! Tenha acesso fácil e rápido aos nossos alimentos orgânicos, cosméticos naturais e produtos de limpeza ecológicos. Com apenas alguns toques, você apoia a agricultura familiar sustentável e traz qualidade para sua vida.</p>
+            <p><strong>A sua melhor versão, a um clique de distância!</strong></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

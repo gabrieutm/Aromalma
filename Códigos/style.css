@@ -274,7 +274,7 @@ body {
     top: 100px;
     left: 400px;
     border-radius: 10px;
-    display: block;
+    display: none;
 }
 
 #loginbtn-popup label {

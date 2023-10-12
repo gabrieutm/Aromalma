@@ -68,3 +68,42 @@ function closeAllMenus() {
         menu.style.display = 'none';
     });
 };
+
+
+
+//tela de login e cadastro
+function toggleScreen(screen) {
+    const loginContainer = document.getElementById("loginbtn-popup");
+    const registerContainer = document.getElementById("register-popup");
+
+    if (screen === 'login') {
+        registerContainer.style.display = 'none';
+        loginContainer.style.display = 'block';
+    } else if (screen === 'register') {
+        registerContainer.style.display = 'block';
+        loginContainer.style.display = 'none';
+    }
+}
+
+
+
+//teste endereço
+
+function meu_callback(conteudo) {
+    if (!("erro" in conteudo)) {
+        document.getElementById("cep").value = conteudo.cep;
+        document.getElementById("estado").value = conteudo.uf;
+        document.getElementById("cidade").value = conteudo.localidade;
+        document.getElementById("bairro").value = conteudo.bairro;
+    }
+}
+
+function preencherCampos() {
+    const cep = document.getElementById("cep").value;
+    const script = document.createElement("script");
+
+    script.src = `https://viacep.com.br/ws/${cep}/json/?callback=meu_callback`;
+    document.body.appendChild(script);
+}
+
+document.getElementById("cep").addEventListener("change", preencherCampos);

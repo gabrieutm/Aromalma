@@ -235,18 +235,19 @@ body {
     color: white;
     margin: 15px 20px 15px 20px;
     letter-spacing: 1.3px;
+    text-indent: 20px;
 }
 
-.menu-popup::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 10px;
 }
 
-.menu-popup::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: white;
     border-radius: 10px;
 }
 
-.menu-popup::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background-color: var(--cor5);
     margin: 80px 10px 80px 0px;
     border-radius: 10px;
@@ -264,29 +265,178 @@ body {
 }
 
 #loginbtn-popup {
-    /*background-color: #001b019a;*/
-    background-color: red;
+    background-color: #001b019a;
     backdrop-filter: blur(10px);
     z-index: 2;
     position: absolute;
     width: 40%;
-    height: 65%;
-    top: 100px;
-    left: 400px;
+    height: 60%;
+    top: 85px;
+    right: 350px;
     border-radius: 10px;
+    text-align: center;
+    padding: 30px 40px;
+    overflow: hidden;
     display: none;
 }
 
-#loginbtn-popup label {
-    display: block;
-    margin-top: 10px;
+#loginbtn-popup h1 {
+    font-family: var(--titulos);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    margin: 15px 40px 15px 40px;
+    color: white;
 }
 
-input[type="email"],
-input[type="password"],
-input[type="checkbox"] {
-    width: 20vw;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#loginbtn-popup .input-box {
+    width: 100%;
+    height: 35px;
+    margin: 30px 0;
+    position: relative;
 }
+
+.input-box input {
+    width: 90%;
+    height: 90%;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px 5px 10px;
+}
+
+.input-box input::placeholder {
+    color: white;
+}
+
+#loginbtn-popup .input-box i {
+    color: white;
+    position: absolute;
+    right: 30px;
+    top: 60%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+#loginbtn-popup .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin: -5px 20px 5px;
+    font-family: var(--textosgerais);
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+#loginbtn-popup .remember-forgot label {
+    color: white;
+    margin: 0 5px 0 5px;
+}
+
+#loginbtn-popup .remember-forgot label input {
+    margin-right: 5px;
+}
+
+#loginbtn-popup .remember-forgot a {
+    color: white;
+    text-decoration: none;
+}
+
+#loginbtn-popup .remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn-log-reg {
+    width: 30%;
+    height: 40px;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+    font-family: var(--textosgerais);
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+
+.link {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0 15px;
+    font-family: var(--textosgerais);
+    letter-spacing: 1px;
+}
+
+.link p {
+    color: white;
+    font-family: var(--textosgerais);
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+
+.change-form {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: var(--textosgerais);
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+
+.change-form:hover {
+    text-decoration: underline;
+}
+
+#register-popup {
+    background-color: #001b019a;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    top: 85px;
+    right: 350px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px 40px;
+    overflow: auto;
+    display: none;
+}
+
+#register-popup h1 {
+    font-family: var(--titulos);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    margin: 15px 40px 15px 40px;
+    color: white;
+}
+
+#register-popup .input-box {
+    position: relative;
+    font-family: var(--textosgerais);
+}
+
+#register-popup .input-box input, #register-popup .input-box label {
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+    height: 20px;
+    margin: 10px 0;
+}
+
+#register-popup .input-box label {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+

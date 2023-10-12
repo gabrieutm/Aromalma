@@ -38,7 +38,7 @@
         </header>
         <nav id="menu-items">
             <ul>
-                <li><button id="homebtn" class="menu-btn"><a href="#"><i class="bi bi-house"></i>INÍCIO</a></button></li>
+                <li><button id="homebtn" class="menu-btn"><a href="javascript:location.reload();"><i class="bi bi-house"></i>INÍCIO</a></button></li>
                 <li><button onclick="toggleMenu('loginbtn-popup')" class="menu-btn"><i class="bi bi-person-circle"></i>CONTA</button></li>
                 <li><button onclick="toggleMenu('products-popup')" class="menu-btn"><i class="bi bi-box2-heart"></i>PRODUTOS</button></li>
                 <li><button onclick="toggleMenu('about-popup')" class="menu-btn"><i class="bi bi-info-circle"></i>SOBRE</button></li>
@@ -59,12 +59,59 @@
         </footer>
     </div>
 
+    <div id="loginbtn-popup" class="menu-popup">
+        <h1>Login</h1>
+        <form>
+            <div class="input-box">
+                <input type="text" placeholder="Nome de Usuário" required>
+                <i class="bi bi-person-fill"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Senha" required>
+                <i class="bi bi-lock-fill"></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Salvar Credenciais</label>
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+            <button type="submit" class="btn-log-reg">Entrar</button>
+            <div class="link">
+                <p>Não tem uma conta? <button class="change-form" onclick="toggleScreen('register')">Registrar-se</button></p>
+            </div>
+        </form>
+    </div>
+
+    <div id="register-popup" class="menu-popup">
+        <h1>Registrar-se</h1>
+        <form>
+            <div class="input-box">
+                <label for="email">Digite seu email</label>
+                <input type="email" placeholder="exemplo: joaozinho@gmail.com" id="email" required>
+                <label for="user">Digite um nome de usuário</label>
+                <input type="text" placeholder="exemplo: joao123" id="user" required>
+                <label for="password">Digite uma senha</label>
+                <input type="password" placeholder="use números e letras" id="password" required>
+                <label for="celular">Digite seu celular</label>
+                <input type="tel" placeholder="(xx)9xxxx-xxxx" id="celular" required>
+                <label>Digite seu endereço</label>
+                <input type="text" id="cep" placeholder="CEP">
+                <input type="text" id="estado" placeholder="Estado" required>
+                <input type="text" id="cidade" placeholder="Cidade" required>
+                <input type="text" id="bairro" placeholder="Bairro" required>
+                <input type="text" id="numero" placeholder="Número" required>
+                <input type="text" id="complemento" placeholder="Complemento">
+            </div>
+            <button type="submit" class="btn-log-reg">Cadastrar</button>
+            <div class="link"><p>Já possui uma conta? <button class="change-form" onclick="toggleScreen('login')">Entrar</button></p></div>
+        </form>
+    </div>
+
     <div id="products-popup" class="menu-popup">
         <button class="icon-close" onclick="closeAllMenus()"><i class="bi bi-x-circle"></i></button>
         <h1>Descubra o poder da natureza em sua forma mais pura com a abrangente linha de produtos da Aromalma</h1>
         <div id="text">
-            <p>Dos deliciosos alimentos orgânicos, cultivados com devoção nas fazendas familiares, aos cosméticos naturais que mimam sua pele com ingredientes que a Terra oferece generosamente, e aos produtos de limpeza ecológicos que respeitam tanto o seu lar quanto o meio ambiente.</p>
-            <p>Cada escolha da Aromalma é um passo em direção a um estilo de vida mais saudável e sustentável, uma jornada onde você nutre seu corpo, enriquece sua rotina de cuidados pessoais e mantém seu espaço impecável, enquanto apoia práticas responsáveis que ecoam através do tempo.</p>
+            <p>Dos deliciosos <strong>alimentos orgânicos</strong>, cultivados com devoção nas fazendas familiares, aos <strong>cosméticos naturais</strong> que mimam sua pele com ingredientes que a Terra oferece generosamente, e aos <strong>produtos de limpeza ecológicos</strong> que respeitam tanto o seu lar quanto o meio ambiente.</p>
+            <p>Cada escolha da Aromalma é um passo em direção a um <strong>estilo de vida mais saudável e sustentável</strong>, uma jornada onde você nutre seu corpo, enriquece sua rotina de cuidados pessoais e mantém seu espaço impecável, enquanto apoia <strong>práticas responsáveis que ecoam através do tempo</strong>.</p>
         </div>
     </div>
 
@@ -83,9 +130,8 @@
     <div id="join-popup" class="menu-popup">
         <button class="icon-close" onclick="closeAllMenus()"><i class="bi bi-x-circle"></i></button>
         <div id="text">
-            <p class="impact">Em busca de um propósito que harmonize paixão e impacto positivo?</p>
+            <h1>Em busca de um propósito que harmonize paixão e impacto positivo?</h1>
             <p>Junte-se a nós no projeto Aromalma, onde temos o compromisso de promover alimentos orgânicos, cosméticos naturais e produtos de limpeza ecológicos provenientes de agricultura familiar.</p>
-            <br>
             <p>Se você é uma <strong>pessoa, família, pequena empresa ou startup</strong> que compartilha nossa visão de um futuro mais sustentável e quer fazer parte dessa jornada, <strong>venha fazer a diferença conosco na equipe Aromalma!</strong></p>
         </div>
     </div>
@@ -94,8 +140,8 @@
         <button class="icon-close" onclick="closeAllMenus()"><i class="bi bi-x-circle"></i></button>
         <h1>Oi, que bom te ver aqui!</h1>
         <div id="text">
-            <p>Precisa de ajuda ou tem alguma dúvida sobre nossos alimentos orgânicos, cosméticos naturais e/ou produtos de limpeza ecológicos?</p>
-            <p>Então está na seção certa para suporte dedicado e informações detalhadas. Estamos aqui para tornar sua experiência Aromalma ainda mais gratificante e esclarecedora.</p>
+            <p>Precisa de <strong>ajuda</strong> ou tem alguma <strong>dúvida</strong> sobre nossos alimentos orgânicos, cosméticos naturais e/ou produtos de limpeza ecológicos?</p>
+            <p>Então está na seção certa para <strong>suporte dedicado</strong> e <strong>informações detalhadas</strong>. Estamos aqui para tornar sua experiência Aromalma ainda mais gratificante e esclarecedora.</p>
         </div>
     </div>
 
@@ -103,12 +149,13 @@
         <button class="icon-close" onclick="closeAllMenus()"><i class="bi bi-x-circle"></i></button>
         <h1>Faça o download do nosso APP!</h1>
         <div id="text">
-            <p>Experimente a praticidade na palma da sua mão com o aplicativo Aromalma! Tenha acesso fácil e rápido aos nossos alimentos orgânicos, cosméticos naturais e produtos de limpeza ecológicos. Com apenas alguns toques, você apoia a agricultura familiar sustentável e traz qualidade para sua vida.</p>
+            <p>Experimente a praticidade na palma da sua mão com o <strong>aplicativo Aromalma</strong>! Tenha acesso fácil e rápido aos nossos alimentos orgânicos, cosméticos naturais e produtos de limpeza ecológicos. Com apenas alguns toques, você apoia a agricultura familiar sustentável e traz qualidade para sua vida.</p>
             <p><strong>A sua melhor versão, a um clique de distância!</strong></p>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script src="https://viacep.com.br/ws/?callback=meu_callback"></script>
 
 </body>
 </html>

@@ -1,0 +1,54 @@
+#products-container {
+    position: relative;
+    overflow: hidden;
+    width: 40%;
+    height: 70%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: red;
+}
+
+#slider {
+    display: flex;
+}
+
+.gallery {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 300px;
+}
+
+.caption {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 300px;
+    position: relative;
+    margin-top: -22px;
+    left: 96px;
+}
+
+.arrow {
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    font-size: 50px;
+    background-color: blue;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    display: block;
+}
+
+#prev-btn {
+    left: 0;
+}
+
+#next-btn {
+    right: 0;
+}
